@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.29
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "1_HelloWorld", "1_HelloWorld\1_HelloWorld.njsproj", "{6B4AB507-2049-4CAB-B282-447831A39C4D}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "2_ExpressApp", "2_ExpressApp\2_ExpressApp.njsproj", "{08EE5E7B-BF0E-4F5C-A373-90AD950FB970}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6B4AB507-2049-4CAB-B282-447831A39C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B4AB507-2049-4CAB-B282-447831A39C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B4AB507-2049-4CAB-B282-447831A39C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08EE5E7B-BF0E-4F5C-A373-90AD950FB970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08EE5E7B-BF0E-4F5C-A373-90AD950FB970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08EE5E7B-BF0E-4F5C-A373-90AD950FB970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08EE5E7B-BF0E-4F5C-A373-90AD950FB970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
