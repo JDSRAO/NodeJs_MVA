@@ -30,6 +30,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="common\common.services.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="common\eventEmitter.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="common\logger.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
@@ -45,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="common\" />
     <Folder Include="services\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />

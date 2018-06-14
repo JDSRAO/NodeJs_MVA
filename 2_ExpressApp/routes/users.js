@@ -7,9 +7,11 @@ var userService = require('../services/userService');
 /* GET users listing. */
 router.get('/', function (req, res)
 {
-    userService.getUsers().then(function (result) {
+    userService.getUsers().then(function (result)
+    {
         return res.status(200).json({ 'data': result });
-    }, function (err) {
+    }, function (err)
+    {
         console.log(err);
         return res.status(500).json({'data': err});
     });
