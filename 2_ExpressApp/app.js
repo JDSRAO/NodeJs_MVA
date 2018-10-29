@@ -24,10 +24,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(9000);
+//app.listen(9000);
 
+//Routes
 app.use('/', routes);
 app.use('/users', users);
+app.set('port', 9000);
 
 var serve = http.createServer(app);
 var io = require('socket.io')(serve);

@@ -1,9 +1,10 @@
 ﻿'use strict';
 var event = require('events');
+//let emitterInstance = require('')
 
 var eventEmitter = new event.EventEmitter();
-eventEmitter.on('', function () {
-
+eventEmitter.on('LError', function (err) {
+    console.error(err);
 });
 
-eventEmitter.emit('');
+eventEmitter.emit('LError', 'from same class');

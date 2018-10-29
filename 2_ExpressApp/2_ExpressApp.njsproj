@@ -42,9 +42,16 @@
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
+    <Compile Include="services\file.module.service.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="services\fileService.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="services\userService.js">
       <SubType>Code</SubType>
     </Compile>
+    <Content Include="content\sample.txt" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
@@ -55,6 +62,7 @@
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="common\" />
+    <Folder Include="content\" />
     <Folder Include="services\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />

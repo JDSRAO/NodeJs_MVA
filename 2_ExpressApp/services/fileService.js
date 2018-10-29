@@ -1,8 +1,8 @@
 ﻿'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
-var service = {};
+let service = {};
 
 service.readFile = function (fileName) {
     return new Promise(function (resolve, reject) {
@@ -18,6 +18,33 @@ service.readFile = function (fileName) {
             reject(e);
         }
     });
+};
+
+service.promise = function (success, error) {
+    return new Promise(function (resolve, reject) {
+        if (error) {
+            reject(error);
+        }
+        resolve(success);
+    });
+};
+
+service.readFileText = function (filePath) {
+    try
+    {
+        fs.readFile(filePath, function (err, data)
+        {
+            if (err)
+            {
+                return err;
+            }
+            return data.toString();
+        });
+    }
+    catch (e)
+    {
+
+    }
 };
 
 module.exports = service;

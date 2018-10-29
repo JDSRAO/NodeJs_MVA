@@ -1,9 +1,12 @@
 ﻿'use strict';
-var express = require('express');
+let express = require('express');
+let event = require('events');
 
-var fs = require('../services/fileService');
+const fs = require('../services/fileService');
+const fileService = require('../services/file.module.service.js');
 
-var router = express.Router();
+let router = express.Router();
+const eventEmitter = new event.EventEmitter();
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -11,16 +14,34 @@ router.get('/', function (req, res) {
 });
 
 router.get('/fRead', function (req, res) {
-    var fileName = '../content/sample.txt';
+    var fileName = './content/sample.txt';
+    
+    //eventEmitter.emit('LError', 'from index API');
     fs.readFile(fileName).then(function (data) {
         return res.status(500).json({
             'data': data
         });
-    }), function(err) {
+    }, function(err) {
         return res.status(500).json({
             'data': err
         });
-    };
+    });
+});
+
+router.get('/fWrite', function (req, res) {
+    let fileName = 'test.txt';
+    let path = './content/'
+    let data = 'Hai I am the data';
+    console.log(__dirname);
+    fileService.writeFile(path, fileName, data).then(function (data) {
+        res.status(200).json({
+            'data' : data
+        });
+    }, function (err) {
+        res.status(500).json({
+            'message': err
+        });
+    });
 });
 
 module.exports = router;
